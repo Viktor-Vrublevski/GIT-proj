@@ -2,9 +2,16 @@ package com.example.git_study.service;
 
 import com.example.git_study.entity.Dog;
 import com.example.git_study.repository.DogRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DogService {
+
     private DogRepository repository;
+
+    public DogService(DogRepository repository) {
+        this.repository = repository;
+    }
 
     public Dog getDog(long id) {
         return repository.getDogById(id);

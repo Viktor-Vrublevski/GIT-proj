@@ -1,10 +1,12 @@
 package com.example.git_study.repository;
 
 import com.example.git_study.entity.Dog;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class DogRepositoryImpl implements DogRepository{
 
     private static Map<Long, Dog> DOG_STORE = new HashMap<>();
