@@ -4,12 +4,12 @@ import com.example.git_study.entity.Dog;
 
 public class DogRepositoryImpl implements DogRepository{
     @Override
-    public Dog getUserById(long id) {
+    public Dog getDogById(long id) {
         return null;
     }
 
     @Override
-    public boolean addUser(Dog dog) {
+    public boolean addDog (Dog dog) {
         return false;
     }
 
