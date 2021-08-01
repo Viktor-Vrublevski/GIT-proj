@@ -22,13 +22,19 @@ public class DogController {
     @PostMapping("/create")
     public ResponseEntity<String> addNewDog(@RequestBody Dog dog) {
         if(service.create(dog)) {
-            return new ResponseEntity<>(HttpStatus.OK);
+            return new ResponseEntity<>("Dog have created",HttpStatus.OK);
         } else return new ResponseEntity<>(HttpStatus.CONFLICT);
     }
 
     @GetMapping("/all-dogs")
     public Collection<Dog> getAllDogs() {
         return service.getAllDogs();
+    }
+
+    @PostMapping("/update")
+    public ResponseEntity<String> updateDog(@RequestBody Dog dog) {
+        service.update(dog);
+        return new ResponseEntity<>("Updating was Successful", HttpStatus.OK);
     }
 
 }
