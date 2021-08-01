@@ -27,6 +27,6 @@ public class DogController {
 
     @GetMapping("/all-dogs")
     public List<Dog> getAllDogs() {
-        r
+        return null;
     }
 }
