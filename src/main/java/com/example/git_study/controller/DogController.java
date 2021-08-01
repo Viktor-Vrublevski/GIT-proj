@@ -37,4 +37,10 @@ public class DogController {
         return new ResponseEntity<>("Updating was Successful", HttpStatus.OK);
     }
 
+    @PostMapping("/delete")
+    public ResponseEntity<String> delete(@RequestBody Dog dog) {
+        service.delete(dog.getId());
+        return new ResponseEntity<>("Dog have deleted", HttpStatus.OK);
+    }
+
 }
