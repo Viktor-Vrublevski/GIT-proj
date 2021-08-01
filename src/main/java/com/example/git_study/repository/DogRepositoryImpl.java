@@ -3,8 +3,7 @@ package com.example.git_study.repository;
 import com.example.git_study.entity.Dog;
 import org.springframework.stereotype.Component;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Component
 public class DogRepositoryImpl implements DogRepository{
@@ -34,5 +33,10 @@ public class DogRepositoryImpl implements DogRepository{
     @Override
     public void update(Dog dog) {
         DOG_STORE.put(dog.getId(), dog);
+    }
+
+    @Override
+    public Collection<Dog> getAllDogs() {
+        return DOG_STORE.values();
     }
 }

@@ -4,6 +4,8 @@ import com.example.git_study.entity.Dog;
 import com.example.git_study.repository.DogRepository;
 import org.springframework.stereotype.Component;
 
+import java.util.Collection;
+
 @Component
 public class DogService {
 
@@ -24,5 +26,8 @@ public class DogService {
     }
     public void update(Dog dog) {
         repository.update(dog);
+    }
+    public Collection<Dog> getAllDogs() {
+        return repository.getAllDogs();
     }
 }
