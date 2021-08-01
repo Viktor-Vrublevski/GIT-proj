@@ -43,4 +43,9 @@ public class DogController {
         return new ResponseEntity<>("Dog have deleted", HttpStatus.OK);
     }
 
+    @GetMapping("/dog/{id}")
+    public ResponseEntity<Dog> getDogById(@PathVariable("id") long id) {
+        Dog dog = service.getDog(id);
+        return new ResponseEntity<>(dog, HttpStatus.OK);
+    }
 }
