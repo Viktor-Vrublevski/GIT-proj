@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.List;
 
 @RestController(value = "/Dog")
@@ -26,7 +27,7 @@ public class DogController {
     }
 
     @GetMapping("/all-dogs")
-    public List<Dog> getAllDogs() {
-        return null;
+    public Collection<Dog> getAllDogs() {
+        return service.getAllDogs();
     }
 }
