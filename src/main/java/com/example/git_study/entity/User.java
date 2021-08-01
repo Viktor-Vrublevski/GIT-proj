@@ -4,14 +4,16 @@ public class User {
     private long id;
     private String name;
     private int age;
+    private Dog dog;
 
     public User() {
     }
 
-    public User(long id, String name, int age) {
+    public User(long id, String name, int age, Dog dog) {
         this.id = id;
         this.name = name;
         this.age = age;
+        this.dog = dog;
     }
 
     public long getId() {
