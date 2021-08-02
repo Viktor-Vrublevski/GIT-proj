@@ -17,12 +17,12 @@ public class UserRepositoryImpl implements UserRepository{
     }
 
     public boolean addUser(User user) {
-       User user1 = USER_REPOSITORY.put(user.getId(), user);
-       if (USER_REPOSITORY.containsKey(user.getId())) {
-           return false;
-       } else {
-           return true;
-       }
+        if (USER_REPOSITORY.containsKey(user.getId())) {
+            return false;
+        } else {
+            USER_REPOSITORY.put(user.getId(), user);
+            return true;
+        }
     }
     public void delete(long id) {
         USER_REPOSITORY.remove(id);
