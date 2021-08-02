@@ -4,6 +4,8 @@ import com.example.git_study.entity.User;
 import com.example.git_study.repository.UserRepository;
 import org.springframework.stereotype.Component;
 
+import java.util.Collection;
+
 @Component
 public class UserService {
 
@@ -24,5 +26,8 @@ public class UserService {
     }
     public void update(User user) {
         repository.update(user);
+    }
+    public Collection<User> getAllUsers() {
+        return repository.getAllUsers();
     }
 }

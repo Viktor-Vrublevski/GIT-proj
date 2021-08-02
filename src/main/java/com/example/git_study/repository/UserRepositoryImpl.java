@@ -3,6 +3,7 @@ package com.example.git_study.repository;
 import com.example.git_study.entity.User;
 import org.springframework.stereotype.Component;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,4 +31,11 @@ public class UserRepositoryImpl implements UserRepository{
     public void update(User user) {
         USER_REPOSITORY.put(user.getId(), user);
     }
+
+    @Override
+    public Collection<User> getAllUsers() {
+        return USER_REPOSITORY.values();
+    }
+
+
 }
